@@ -1,19 +1,20 @@
 import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 
 import "./styles/main.scss";
 
-import thumb from './images/thumb_image.png';
+import Switches from './router/switches';
+import Navbar from './components/navBar';
 
 const App = () => (
     <div className="default">
-        <div className="title">
-            Template
-        </div>
 
-        <div className="image">
-            <img src={thumb} alt="default-image" />
+        <div className="main-body">
+            <Router>
+                <Navbar />
+                <Switches />
+            </Router>
         </div>
-
     </div>
 );
 
